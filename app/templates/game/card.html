@@ -1,0 +1,14 @@
+<div class="game-container">
+    <div class="game-card thumbnail" ng-class="{flipped: tile.flipped}">
+        <div class="game-face front">
+            <img ng-src="images/cards/card.png">
+            <!--<img ng-src="{{getThumbnail(tile.cover)}}" blurred crossOrigin='anonymous'>-->
+        </div>
+        <div class="game-face back" ng-class="{player: tile.player}">
+            <!--<img ng-src="{{getThumbnail(tile.cover)}}" blurred crossOrigin='anonymous'>-->
+            <img ng-src="{{tile.cover}}">
+
+            <!--<div ng-show="{{tile.player}}"></div>-->
+        </div>
+    </div>
+</div>

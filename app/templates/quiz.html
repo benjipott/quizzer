@@ -1,0 +1,30 @@
+<ion-view title="Quiz Game">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <div class="vignetage">
+        <img class="background-card" ng-src="{{question.album.cover}}?size=big">
+    </div>
+
+    <h3 class="question has-header">{{question.title}}</h3>
+
+    <ion-content class="has-header center-content" scroll="true">
+        <ion-radio ng-repeat="response in question.responses | shuffle" ng-model="responseData" name="response-data"
+                   class="response"
+                   ng-value="response.id"
+                   ng-change="responseChange(response)">
+            {{response.name}}
+        </ion-radio>
+    </ion-content>
+
+    <div class="bar bar-footer ">
+        <!--TODO modifier le style du bouton selon le temps disoponible (button-calm -> button-balanced-> button-energized-> button-assertive)-->
+        <button class="button button-outline pull-right button-calm icon-right ion-android-checkmark"
+                ng-click="validate()">
+            Valider
+        </button>
+    </div>
+
+    <player-manager id="player-manager-container" cover="question.album.cover"></player-manager>
+</ion-view>

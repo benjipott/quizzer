@@ -1,0 +1,33 @@
+<ion-view title="Playlists">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+
+        <!--<ion-list class="list card">-->
+        <!--<ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}" class="item-avatar">-->
+        <!--{{playlist.title}}-->
+        <!--</ion-item>-->
+        <!--</ion-list>-->
+        <div class="list row">
+            <div class=" col col-20" ng-repeat="playlist in playlists">
+                <div class="item item-avatar">
+                    <img src="avatar.jpg">
+
+                    <h2>Pretty Hate Machine</h2>
+
+                    <p>Nine Inch Nails</p>
+                </div>
+
+                <div class="item item-image">
+                    <img src="cover.jpg">
+                </div>
+
+                <a class="item item-icon-left assertive" href="#">
+                    <i class="icon ion-music-note"></i>
+                    Start listening
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

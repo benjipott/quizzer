@@ -1,0 +1,27 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-{{result.theme}}">
+        <h1 class="title">{{result.message}}</h1>
+    </ion-header-bar>
+    <div class="vignetage">
+        <img class="background-card" ng-cache ng-src="{{question.album.cover}}?size=big">
+    </div>
+    <ion-content scroll="true" has-header="true" has-subheader="false" has-footer="true"
+                 class="padding" delegate-handle="score">
+        <h2 class="validation">{{question.artist.name}}</h2>
+
+        <div class="item item-body">
+            <img ng-cache ng-src="{{question.artist.picture}}" class="artist-picture">
+
+            <div class="button button-icon icon ion-mic-c"
+                 ng-show="question.artist.ontour"></div>
+
+            <p ng-bind-html="SkipValidation(question.artist.bio.content)"></p>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar bar-footer bar-{{result.theme}}">
+        <button class="button pull-right button-{{result.theme}} button-large icon-right ion-ios7-arrow-forward"
+                ng-click="next()">
+            Continuer
+        </button>
+    </ion-footer-bar>
+</ion-modal-view>

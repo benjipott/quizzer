@@ -1,0 +1,14 @@
+<ion-view title="Play Game">
+    <img class="background-card" ng-src="{{currentCard.cover}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header center-content" scroll="false">
+        <div ng-repeat="jeu in game.grid" class="row row-25 row-middle">
+            <div ng-repeat="carte in jeu track by $index" ng-click="lunch(carte)" class="col col-25 col-center">
+                <mg-card tile="carte"></mg-card>
+            </div>
+        </div>
+        <player-manager id="player-manager-container"></player-manager>
+    </ion-content>
+</ion-view>

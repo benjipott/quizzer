@@ -1,0 +1,11 @@
+@include orbicular(
+  $barColor:  #43cee6,    // The completed progress color
+  $barBg:     #FFF,       // The remaining progress color
+  $barWidth:  5,          // The bar width is defined as a percentage of the width of the circle
+  $contentBg: rgba(43, 56, 63, 1),    // The circle center
+  $fontSize:  40,          // Content font-size as a percentage of the circle size
+  $fontColor: #FFF,       // Content text color
+  $transTime: 0.2s,       // Time to animate the movement
+  $transFunc: linear,     // transition timing
+  $shadow: 3px 3px 8px rgba(0, 0, 0, 0.2)
+);

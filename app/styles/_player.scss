@@ -1,0 +1,85 @@
+@import 'playerConfig';
+
+#player-manager-container {
+  max-height: 40%;
+  width: 40%;
+  height: auto;
+  display: block;
+  position: absolute;
+  z-index: 450;
+  bottom: 10px;
+  left: 10px;
+  font-family: CaviarDreams;
+}
+
+@media all and (orientation: landscape) {
+  #player-manager-container {
+    max-width: 20%;
+  }
+}
+
+.slider-slide {
+  overflow: hidden;
+}
+
+.background-card,
+.background-card-blured {
+  display: block;
+  width: auto;
+  height: 110%;
+  margin-left: -30%;
+  margin-top: -5%;
+  //max-width : 110%;
+  max-height: 110%;
+}
+
+.background-card-blured,
+.background-card-blured-light {
+  @include filter(blur(10px));
+  @include opacity(0.8);
+}
+
+.background-card-blured-light {
+  position: absolute;
+  @include filter(blur(2px));
+}
+
+.vignetage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.vignetage:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  //z-index: 2;
+  content: "";
+  background: -webkit-radial-gradient(center center, circle contain, transparent 0%, #000 300%); /* New WebKit syntax */
+  background: -moz-radial-gradient(center center, circle contain, transparent 0%, #000 300%); /* New WebKit syntax */
+  background: -ms-radial-gradient(center center, circle contain, transparent 0%, #000 300%); /* New WebKit syntax */
+  background: -o-radial-gradient(center center, circle contain, transparent 0%, #000 300%); /* New WebKit syntax */
+  // @include background-image(radial-gradient(center center, circle cover, transparent 0%, #000 100%));
+  //@include filter(box-shadow(0px 0px 163px 20px black inset));
+  //@include box-shadow(0px 0px 163px 20px black inset);
+}
+
+.artist-picture {
+  //@include box-shadow(2px 2px 3px 2px #000000);
+  border: 2px solid #fff9f9;
+}
+
+@media all and (orientation: landscape) {
+  .background-card,
+  .background-card-blured {
+    display: block;
+    width: 110%;
+    height: auto;
+    margin-left: -5%;
+    margin-top: -5%;
+    max-width: 110%;
+  }
+}

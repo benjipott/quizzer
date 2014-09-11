@@ -1,0 +1,20 @@
+{
+  "name": "Quizzer",
+  "version": "0.0.0",
+  "dependencies": {
+    "ionic": "v1.0.0-beta.8",
+    "compass-mixins": "~1.0.0",
+    "StackBlur": "~0.5.0",
+    "angular-loading-bar": "~0.5.2",
+    "angular-soundmanager2": "~0.2.3",
+    "orbicular": "~3.0.1",
+    "angular-touch": "~1.2.23",
+    "imgcache.js": "~0.7.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.17",
+    "angular-scenario": "~1.2.17",
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.11"
+  },
+  "appPath": "app"
+}
